@@ -24,17 +24,6 @@ namespace apouche
         virtual ~IZiaConnection(){}
 
         /**
-         * @brief Type definition for clarity in the code
-         */
-        using NativeHandle = int;
-
-        /**
-         * @brief Allow any one to get the internal file descriptor of the socket
-         * @return The native socket qualifier
-         */
-        virtual NativeHandle getNativeHandle() const = 0;
-
-        /**
          * @brief Tells the connection to receive one or more requests an internally store it. Will clear the internal list before.
          * @return The number of requests, received or -1 if an error occured
          */
